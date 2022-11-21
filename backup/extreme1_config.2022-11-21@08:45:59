@@ -1,0 +1,2889 @@
+diag post rbridge-id 1 enable
+diag post rbridge-id 2 enable
+diag post rbridge-id 3 enable
+diag post rbridge-id 4 enable
+logging raslog console INFO
+logging syslog-server 10.100.1.206 use-vrf mgmt-vrf
+!
+logging auditlog class SECURITY
+logging auditlog class CONFIGURATION
+logging auditlog class FIRMWARE
+logging syslog-facility local LOG_LOCAL0
+logging syslog-client localip CHASSIS_IP
+switch-attributes 1
+ chassis-name VDX6940-36Q
+ host-name TDExtremeLabVDX6940-24-1
+!
+switch-attributes 2
+ chassis-name VDX6940-36Q
+ host-name TDExtremeLabVDX6940-24-2
+!
+switch-attributes 3
+ chassis-name VDX6740T
+ host-name TDExtremeLab-6740T
+!
+switch-attributes 4
+ chassis-name VDX6940-144S
+ host-name TDExtremeLab-6940-144
+!
+no support autoupload enable
+line vty
+ exec-timeout 10
+!
+vcs virtual ip address 10.100.1.134/24
+zoning enabled-configuration cfg-name ""
+zoning enabled-configuration default-zone-access allaccess
+zoning enabled-configuration cfg-action cfg-save
+dpod 1/0/1
+ reserve
+!
+dpod 1/0/2
+ reserve
+!
+dpod 1/0/3
+ reserve
+!
+dpod 1/0/4
+ reserve
+!
+dpod 1/0/5
+!
+dpod 1/0/6
+!
+dpod 1/0/7
+!
+dpod 1/0/8
+!
+dpod 1/0/9
+!
+dpod 1/0/10
+!
+dpod 1/0/11
+!
+dpod 1/0/12
+!
+dpod 1/0/13
+!
+dpod 1/0/14
+!
+dpod 1/0/15
+!
+dpod 1/0/16
+!
+dpod 1/0/17
+!
+dpod 1/0/18
+!
+dpod 1/0/19
+!
+dpod 1/0/20
+!
+dpod 1/0/21
+!
+dpod 1/0/22
+!
+dpod 1/0/23
+!
+dpod 1/0/24
+!
+dpod 1/0/25
+ reserve
+!
+dpod 1/0/26
+!
+dpod 1/0/27
+!
+dpod 1/0/28
+!
+dpod 1/0/29
+!
+dpod 1/0/30
+!
+dpod 1/0/31
+!
+dpod 1/0/32
+!
+dpod 1/0/33
+!
+dpod 1/0/34
+!
+dpod 1/0/35
+ reserve
+!
+dpod 1/0/36
+!
+dpod 2/0/1
+ reserve
+!
+dpod 2/0/2
+ reserve
+!
+dpod 2/0/3
+!
+dpod 2/0/4
+!
+dpod 2/0/5
+!
+dpod 2/0/6
+!
+dpod 2/0/7
+!
+dpod 2/0/8
+!
+dpod 2/0/9
+!
+dpod 2/0/10
+!
+dpod 2/0/11
+!
+dpod 2/0/12
+!
+dpod 2/0/13
+!
+dpod 2/0/14
+!
+dpod 2/0/15
+!
+dpod 2/0/16
+!
+dpod 2/0/17
+!
+dpod 2/0/18
+!
+dpod 2/0/19
+!
+dpod 2/0/20
+!
+dpod 2/0/21
+!
+dpod 2/0/22
+!
+dpod 2/0/23
+!
+dpod 2/0/24
+!
+dpod 2/0/25
+!
+dpod 2/0/26
+!
+dpod 2/0/27
+!
+dpod 2/0/28
+!
+dpod 2/0/29
+!
+dpod 2/0/30
+!
+dpod 2/0/31
+!
+dpod 2/0/32
+!
+dpod 2/0/33
+!
+dpod 2/0/34
+!
+dpod 2/0/35
+!
+dpod 2/0/36
+!
+dpod 3/0/1
+ reserve
+!
+dpod 3/0/2
+ reserve
+!
+dpod 3/0/3
+ reserve
+!
+dpod 3/0/4
+!
+dpod 3/0/5
+ reserve
+!
+dpod 3/0/6
+ reserve
+!
+dpod 3/0/7
+ reserve
+!
+dpod 3/0/8
+ reserve
+!
+dpod 3/0/9
+ reserve
+!
+dpod 3/0/10
+ reserve
+!
+dpod 3/0/11
+ reserve
+!
+dpod 3/0/12
+ reserve
+!
+dpod 3/0/13
+ reserve
+!
+dpod 3/0/14
+ reserve
+!
+dpod 3/0/15
+ reserve
+!
+dpod 3/0/16
+ reserve
+!
+dpod 3/0/17
+ reserve
+!
+dpod 3/0/18
+ reserve
+!
+dpod 3/0/19
+ reserve
+!
+dpod 3/0/20
+ reserve
+!
+dpod 3/0/21
+ reserve
+!
+dpod 3/0/22
+ reserve
+!
+dpod 3/0/23
+ reserve
+!
+dpod 3/0/24
+ reserve
+!
+dpod 3/0/25
+ reserve
+!
+dpod 3/0/26
+!
+dpod 3/0/27
+ reserve
+!
+dpod 3/0/28
+!
+dpod 3/0/29
+ reserve
+!
+dpod 3/0/30
+!
+dpod 3/0/31
+!
+dpod 3/0/32
+!
+dpod 3/0/33
+!
+dpod 3/0/34
+!
+dpod 3/0/35
+!
+dpod 3/0/36
+!
+dpod 3/0/37
+!
+dpod 3/0/38
+ reserve
+!
+dpod 3/0/39
+!
+dpod 3/0/40
+!
+dpod 3/0/41
+!
+dpod 3/0/42
+!
+dpod 3/0/43
+!
+dpod 3/0/44
+!
+dpod 3/0/45
+!
+dpod 3/0/46
+!
+dpod 3/0/47
+!
+dpod 3/0/48
+!
+dpod 3/0/49
+!
+dpod 3/0/50
+!
+dpod 3/0/51
+ reserve
+!
+dpod 3/0/52
+ reserve
+!
+dpod 4/0/1
+ reserve
+!
+dpod 4/0/2
+!
+dpod 4/0/3
+ reserve
+!
+dpod 4/0/4
+!
+dpod 4/0/5
+ reserve
+!
+dpod 4/0/6
+!
+dpod 4/0/7
+!
+dpod 4/0/8
+!
+dpod 4/0/9
+!
+dpod 4/0/10
+!
+dpod 4/0/11
+!
+dpod 4/0/12
+!
+dpod 4/0/13
+!
+dpod 4/0/14
+!
+dpod 4/0/15
+!
+dpod 4/0/16
+!
+dpod 4/0/17
+!
+dpod 4/0/18
+!
+dpod 4/0/19
+!
+dpod 4/0/20
+!
+dpod 4/0/21
+!
+dpod 4/0/22
+!
+dpod 4/0/23
+!
+dpod 4/0/24
+!
+dpod 4/0/25
+!
+dpod 4/0/26
+!
+dpod 4/0/27
+!
+dpod 4/0/28
+!
+dpod 4/0/29
+!
+dpod 4/0/30
+!
+dpod 4/0/31
+!
+dpod 4/0/32
+!
+dpod 4/0/33
+ reserve
+!
+dpod 4/0/34
+!
+dpod 4/0/35
+!
+dpod 4/0/36
+!
+dpod 4/0/37
+!
+dpod 4/0/38
+!
+dpod 4/0/39
+!
+dpod 4/0/40
+!
+dpod 4/0/41
+!
+dpod 4/0/42
+!
+dpod 4/0/43
+!
+dpod 4/0/44
+!
+dpod 4/0/45
+!
+dpod 4/0/46
+!
+dpod 4/0/47
+!
+dpod 4/0/48
+!
+dpod 4/0/49
+!
+dpod 4/0/50
+!
+dpod 4/0/51
+!
+dpod 4/0/52
+!
+dpod 4/0/53
+!
+dpod 4/0/54
+!
+dpod 4/0/55
+!
+dpod 4/0/56
+!
+dpod 4/0/57
+!
+dpod 4/0/58
+!
+dpod 4/0/59
+!
+dpod 4/0/60
+!
+dpod 4/0/61
+!
+dpod 4/0/62
+!
+dpod 4/0/63
+!
+dpod 4/0/64
+!
+dpod 4/0/65
+!
+dpod 4/0/66
+!
+dpod 4/0/67
+!
+dpod 4/0/68
+!
+dpod 4/0/69
+!
+dpod 4/0/70
+!
+dpod 4/0/71
+!
+dpod 4/0/72
+!
+dpod 4/0/73
+!
+dpod 4/0/74
+!
+dpod 4/0/75
+!
+dpod 4/0/76
+!
+dpod 4/0/77
+!
+dpod 4/0/78
+!
+dpod 4/0/79
+!
+dpod 4/0/80
+!
+dpod 4/0/81
+!
+dpod 4/0/82
+!
+dpod 4/0/83
+!
+dpod 4/0/84
+!
+dpod 4/0/85
+!
+dpod 4/0/86
+!
+dpod 4/0/87
+!
+dpod 4/0/88
+!
+dpod 4/0/89
+!
+dpod 4/0/90
+!
+dpod 4/0/91
+!
+dpod 4/0/92
+!
+dpod 4/0/93
+!
+dpod 4/0/94
+!
+dpod 4/0/95
+!
+dpod 4/0/96
+!
+dpod 4/0/97
+ reserve
+!
+dpod 4/0/98
+ reserve
+!
+dpod 4/0/99
+!
+dpod 4/0/100
+!
+dpod 4/0/101
+!
+dpod 4/0/102
+!
+dpod 4/0/103
+!
+dpod 4/0/104
+!
+dpod 4/0/105
+!
+dpod 4/0/106
+!
+dpod 4/0/107
+!
+dpod 4/0/108
+!
+role name admin desc Administrator
+role name user desc User
+aaa authentication login local
+aaa accounting exec default start-stop none
+aaa accounting commands default start-stop none
+aaa authorization command none
+service password-encryption
+username admin password "BwrsDbB+tABWGWpINOVKoQ==\n" encryption-level 7 role admin desc Administrator
+username user password "BwrsDbB+tABWGWpINOVKoQ==\n" encryption-level 7 role user desc User
+snmp-server contact "Field Support."
+snmp-server location "End User Premise."
+snmp-server sys-descr "Brocade VDX Switch."
+snmp-server enable trap
+snmp-server community public groupname public
+snmp-server host 10.100.1.206 public
+ version 2c
+ use-vrf mgmt-vrf
+ source-interface management chassis-ip
+!
+snmp-server view All 1 included
+snmp-server group public v2c read All write All notify All
+cee-map default
+ precedence 1
+ priority-group-table 1 weight 40 pfc on
+ priority-group-table 15.0 pfc off
+ priority-group-table 15.1 pfc off
+ priority-group-table 15.2 pfc off
+ priority-group-table 15.3 pfc off
+ priority-group-table 15.4 pfc off
+ priority-group-table 15.5 pfc off
+ priority-group-table 15.6 pfc off
+ priority-group-table 15.7 pfc off
+ priority-group-table 2 weight 60 pfc off
+ priority-table 2 2 2 1 2 2 2 15.0
+ remap fabric-priority priority 0
+ remap lossless-priority priority 0
+!
+fcoe
+ fabric-map default
+  vlan 1002
+  san-mode local
+  priority 3
+  virtual-fabric 128
+  fcmap 0E:FC:00
+  advertisement interval 8000
+  keep-alive timeout
+ !
+!
+interface Vlan 1
+!
+interface Vlan 18
+!
+interface Vlan 102
+!
+fabric route mcast rbridge-id 1
+!
+fabric route mcast rbridge-id 2
+!
+fabric route mcast rbridge-id 3
+!
+fabric route mcast rbridge-id 4
+!
+protocol lldp
+ advertise dcbx-fcoe-app-tlv
+ advertise dcbx-fcoe-logical-link-tlv
+ advertise dcbx-tlv
+ advertise bgp-auto-nbr-tlv
+ advertise optional-tlv management-address
+ advertise optional-tlv system-name
+ system-description Brocade-VDX-VCS 10
+!
+protocol cdp
+vlan dot1q tag native
+port-profile UpgradedVlanProfile
+ vlan-profile
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan all
+ !
+!
+port-profile auto_myvcenter_datacenter-2_Management+Network
+ vlan-profile
+  switchport
+  switchport mode access
+  switchport access vlan 1
+ !
+!
+port-profile auto_myvcenter_datacenter-2_VM+Network
+ vlan-profile
+  switchport
+  switchport mode access
+  switchport access vlan 1
+ !
+!
+port-profile auto_myvcenter_datacenter-2_VMkernel
+ vlan-profile
+  switchport
+  switchport mode access
+  switchport access vlan 1
+ !
+!
+port-profile auto_myvcenter_datacenter-2_VMkernel+2
+ vlan-profile
+  switchport
+  switchport mode access
+  switchport access vlan 1
+ !
+!
+port-profile default
+ vlan-profile
+  switchport
+  switchport mode trunk
+  switchport trunk native-vlan 1
+ !
+!
+port-profile auto_myvcenter_datacenter-2_Management+Network activate
+port-profile auto_myvcenter_datacenter-2_Management+Network static ecf4.bbda.f164
+port-profile auto_myvcenter_datacenter-2_Management+Network static ecf4.bbda.f188
+port-profile auto_myvcenter_datacenter-2_VM+Network activate
+port-profile auto_myvcenter_datacenter-2_VM+Network static 000c.297e.a78e
+port-profile auto_myvcenter_datacenter-2_VM+Network static 0050.56ba.6381
+port-profile auto_myvcenter_datacenter-2_VM+Network static 0050.56ba.c386
+port-profile auto_myvcenter_datacenter-2_VM+Network static 0050.56bf.1ad8
+port-profile auto_myvcenter_datacenter-2_VM+Network static 0050.56bf.4528
+port-profile auto_myvcenter_datacenter-2_VM+Network static 0050.56bf.5245
+port-profile auto_myvcenter_datacenter-2_VM+Network static 0050.56bf.60d0
+port-profile auto_myvcenter_datacenter-2_VM+Network static 0050.56bf.6323
+port-profile auto_myvcenter_datacenter-2_VM+Network static 0050.56bf.6c38
+port-profile auto_myvcenter_datacenter-2_VM+Network static 0050.56bf.7e41
+port-profile auto_myvcenter_datacenter-2_VM+Network static 0050.56bf.7f32
+port-profile auto_myvcenter_datacenter-2_VM+Network static 0050.56bf.80d4
+port-profile auto_myvcenter_datacenter-2_VM+Network static 0050.56bf.9836
+port-profile auto_myvcenter_datacenter-2_VM+Network static 0050.56bf.9de0
+port-profile auto_myvcenter_datacenter-2_VM+Network static 0050.56bf.ab6e
+port-profile auto_myvcenter_datacenter-2_VM+Network static 0050.56bf.acd2
+port-profile auto_myvcenter_datacenter-2_VM+Network static 0050.56bf.bceb
+port-profile auto_myvcenter_datacenter-2_VM+Network static 0050.56bf.c36a
+port-profile auto_myvcenter_datacenter-2_VM+Network static 0050.56bf.d446
+port-profile auto_myvcenter_datacenter-2_VM+Network static 0050.56bf.dda1
+port-profile auto_myvcenter_datacenter-2_VM+Network static 0050.56bf.f9cc
+port-profile auto_myvcenter_datacenter-2_VMkernel activate
+port-profile auto_myvcenter_datacenter-2_VMkernel static 0050.5669.e5fe
+port-profile auto_myvcenter_datacenter-2_VMkernel static 0050.566e.0781
+port-profile auto_myvcenter_datacenter-2_VMkernel+2 activate
+port-profile auto_myvcenter_datacenter-2_VMkernel+2 static 0050.5660.f149
+port-profile auto_myvcenter_datacenter-2_VMkernel+2 static 0050.5667.c55c
+port-profile-domain default
+ port-profile UpgradedVlanProfile
+ port-profile auto_myvcenter_datacenter-2_Management+Network
+ port-profile auto_myvcenter_datacenter-2_VM+Network
+ port-profile auto_myvcenter_datacenter-2_VMkernel
+ port-profile auto_myvcenter_datacenter-2_VMkernel+2
+!
+class-map cee
+!
+class-map default
+!
+rbridge-id 1
+ switch-attributes chassis-name VDX6940-36Q
+ switch-attributes host-name TDExtremeLabVDX6940-24-1
+ vrf mgmt-vrf
+  address-family ipv4 unicast
+   ip route 0.0.0.0/0 10.100.2.1
+  !
+  address-family ipv6 unicast
+  !
+ !
+ system-monitor fan threshold marginal-threshold 1 down-threshold 2
+ system-monitor fan alert state removed action raslog
+ system-monitor power threshold marginal-threshold 1 down-threshold 2
+ system-monitor power alert state removed action raslog
+ system-monitor temp threshold marginal-threshold 1 down-threshold 2
+ system-monitor cid-card threshold marginal-threshold 1 down-threshold 2
+ system-monitor cid-card alert state none action none
+ system-monitor sfp alert state none action none
+ system-monitor compact-flash threshold marginal-threshold 1 down-threshold 0
+ system-monitor MM threshold marginal-threshold 1 down-threshold 2
+ system-monitor LineCard threshold marginal-threshold 1 down-threshold 2
+ system-monitor LineCard alert state none action none
+ system-monitor SFM threshold marginal-threshold 1 down-threshold 2
+ snmp-server three-tuple-if enable
+ resource-monitor cpu enable
+ resource-monitor memory enable threshold 100 action raslog
+ resource-monitor process memory enable alarm 500 critical 600
+ no protocol vrrp
+ no protocol vrrp-extended
+ hardware-profile tcam default
+ hardware-profile route-table default maximum_paths 8 openflow off
+ hardware-profile vlan-classification default
+ hardware-profile kap default
+ fabric neighbor-discovery
+ clock timezone Etc/GMT
+ ag
+  no enable
+ !
+ telnet server use-vrf default-vrf
+ telnet server use-vrf mgmt-vrf
+ ssh server key rsa 2048
+ ssh server key ecdsa 256
+ ssh server key dsa
+ ssh server use-vrf default-vrf
+ ssh server use-vrf mgmt-vrf
+ http server use-vrf default-vrf
+ http server use-vrf mgmt-vrf
+ fcoe
+  fcoe-enodes 0
+ !
+!
+rbridge-id 2
+ switch-attributes chassis-name VDX6940-36Q
+ switch-attributes host-name TDExtremeLabVDX6940-24-2
+ vrf mgmt-vrf
+  address-family ipv4 unicast
+   ip route 0.0.0.0/0 10.100.2.1
+  !
+  address-family ipv6 unicast
+  !
+ !
+ system-monitor fan threshold marginal-threshold 1 down-threshold 2
+ system-monitor fan alert state removed action raslog
+ system-monitor power threshold marginal-threshold 1 down-threshold 2
+ system-monitor power alert state removed action raslog
+ system-monitor temp threshold marginal-threshold 1 down-threshold 2
+ system-monitor cid-card threshold marginal-threshold 1 down-threshold 2
+ system-monitor cid-card alert state none action none
+ system-monitor sfp alert state none action none
+ system-monitor compact-flash threshold marginal-threshold 1 down-threshold 0
+ system-monitor MM threshold marginal-threshold 1 down-threshold 2
+ system-monitor LineCard threshold marginal-threshold 1 down-threshold 2
+ system-monitor LineCard alert state none action none
+ system-monitor SFM threshold marginal-threshold 1 down-threshold 2
+ snmp-server three-tuple-if enable
+ resource-monitor cpu enable
+ resource-monitor memory enable threshold 100 action raslog
+ resource-monitor process memory enable alarm 500 critical 600
+ no protocol vrrp
+ no protocol vrrp-extended
+ hardware-profile tcam default
+ hardware-profile route-table default maximum_paths 8 openflow off
+ hardware-profile vlan-classification default
+ hardware-profile kap default
+ fabric neighbor-discovery
+ clock timezone Etc/GMT
+ ag
+  no enable
+ !
+ telnet server use-vrf default-vrf
+ telnet server use-vrf mgmt-vrf
+ ssh server key rsa 2048
+ ssh server key ecdsa 256
+ ssh server key dsa
+ ssh server use-vrf default-vrf
+ ssh server use-vrf mgmt-vrf
+ http server use-vrf default-vrf
+ http server use-vrf mgmt-vrf
+ fcoe
+  fcoe-enodes 0
+ !
+!
+rbridge-id 3
+ switch-attributes chassis-name VDX6740T
+ switch-attributes host-name TDExtremeLab-6740T
+ vrf mgmt-vrf
+  address-family ipv4 unicast
+   ip route 0.0.0.0/0 10.100.2.1
+  !
+  address-family ipv6 unicast
+  !
+ !
+ system-monitor fan threshold marginal-threshold 1 down-threshold 2
+ system-monitor fan alert state removed action raslog
+ system-monitor power threshold marginal-threshold 1 down-threshold 2
+ system-monitor power alert state removed action raslog
+ system-monitor temp threshold marginal-threshold 1 down-threshold 2
+ system-monitor cid-card threshold marginal-threshold 1 down-threshold 2
+ system-monitor cid-card alert state none action none
+ system-monitor sfp alert state none action none
+ system-monitor compact-flash threshold marginal-threshold 1 down-threshold 0
+ system-monitor MM threshold marginal-threshold 1 down-threshold 2
+ system-monitor LineCard threshold marginal-threshold 1 down-threshold 2
+ system-monitor LineCard alert state none action none
+ system-monitor SFM threshold marginal-threshold 1 down-threshold 2
+ snmp-server three-tuple-if enable
+ resource-monitor cpu enable
+ resource-monitor memory enable threshold 100 action raslog
+ resource-monitor process memory enable alarm 500 critical 600
+ no protocol vrrp
+ no protocol vrrp-extended
+ hardware-profile tcam default
+ hardware-profile route-table default maximum_paths 8 openflow off
+ hardware-profile kap default
+ fabric neighbor-discovery
+ clock timezone Etc/GMT
+ ag
+  enable
+  counter reliability 25
+  timeout fnm 120
+  pg 0
+   modes lb
+   rename pg0
+  !
+ !
+ telnet server use-vrf default-vrf
+ telnet server use-vrf mgmt-vrf
+ ssh server key rsa 2048
+ ssh server key ecdsa 256
+ ssh server key dsa
+ ssh server use-vrf default-vrf
+ ssh server use-vrf mgmt-vrf
+ http server use-vrf default-vrf
+ http server use-vrf mgmt-vrf
+ fcoe
+  fcoe-enodes 64
+ !
+!
+rbridge-id 4
+ switch-attributes chassis-name VDX6940-144S
+ switch-attributes host-name TDExtremeLab-6940-144
+ vrf mgmt-vrf
+  address-family ipv4 unicast
+   ip route 0.0.0.0/0 10.100.2.1
+  !
+  address-family ipv6 unicast
+  !
+ !
+ system-monitor fan threshold marginal-threshold 1 down-threshold 2
+ system-monitor fan alert state removed action raslog
+ system-monitor power threshold marginal-threshold 1 down-threshold 2
+ system-monitor power alert state removed action raslog
+ system-monitor temp threshold marginal-threshold 1 down-threshold 2
+ system-monitor cid-card threshold marginal-threshold 1 down-threshold 2
+ system-monitor cid-card alert state none action none
+ system-monitor sfp alert state none action none
+ system-monitor compact-flash threshold marginal-threshold 1 down-threshold 0
+ system-monitor MM threshold marginal-threshold 1 down-threshold 0
+ system-monitor LineCard threshold marginal-threshold 1 down-threshold 2
+ system-monitor LineCard alert state none action none
+ system-monitor SFM threshold marginal-threshold 1 down-threshold 2
+ snmp-server three-tuple-if enable
+ resource-monitor cpu enable
+ resource-monitor memory enable threshold 100 action raslog
+ resource-monitor process memory enable alarm 500 critical 600
+ no protocol vrrp
+ no protocol vrrp-extended
+ hardware-profile tcam default
+ hardware-profile route-table default maximum_paths 8 openflow off
+ hardware-profile vlan-classification default
+ hardware-profile kap default
+ fabric neighbor-discovery
+ clock timezone Etc/GMT
+ ag
+  no enable
+ !
+ telnet server use-vrf default-vrf
+ telnet server use-vrf mgmt-vrf
+ ssh server key rsa 2048
+ ssh server key ecdsa 256
+ ssh server key dsa
+ ssh server use-vrf default-vrf
+ ssh server use-vrf mgmt-vrf
+ http server use-vrf default-vrf
+ http server use-vrf mgmt-vrf
+ fcoe
+  fcoe-enodes 0
+ !
+!
+interface Management 1/0
+ no tcp burstrate
+ ip icmp echo-reply
+ no ip address dhcp
+ ip address 10.100.1.130/24
+ ipv6 icmpv6 echo-reply
+ no ipv6 address autoconfig
+ no ipv6 address dhcp
+ vrf forwarding mgmt-vrf
+ no shutdown
+!
+interface Management 2/0
+ no tcp burstrate
+ ip icmp echo-reply
+ no ip address dhcp
+ ip address 10.100.1.131/24
+ ipv6 icmpv6 echo-reply
+ no ipv6 address autoconfig
+ no ipv6 address dhcp
+ vrf forwarding mgmt-vrf
+ no shutdown
+!
+interface Management 3/0
+ no tcp burstrate
+ ip icmp echo-reply
+ no ip address dhcp
+ ip address 10.100.1.132/24
+ ipv6 icmpv6 echo-reply
+ no ipv6 address autoconfig
+ no ipv6 address dhcp
+ vrf forwarding mgmt-vrf
+ no shutdown
+!
+interface Management 4/0
+ no tcp burstrate
+ ip icmp echo-reply
+ no ip address dhcp
+ ip address 10.100.1.133/24
+ ipv6 icmpv6 echo-reply
+ no ipv6 address autoconfig
+ no ipv6 address dhcp
+ vrf forwarding mgmt-vrf
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/1
+ speed 1000
+ channel-group 1 mode on type standard
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/2
+ speed 1000
+ channel-group 1 mode on type standard
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/3
+ switchport
+ switchport mode trunk
+ switchport trunk allowed vlan add 18
+ switchport trunk tag native-vlan
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/4
+ switchport
+ switchport mode trunk
+ switchport trunk allowed vlan add 18
+ switchport trunk tag native-vlan
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/5
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/6
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/7
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/8
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/9
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/10
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/11
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/12
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/13
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/14
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/15
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/16
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/17
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/18
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/19
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/20
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/21
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/22
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/23
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/24
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/25
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/26
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/27
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/28
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/29
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/30
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/31
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/32
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/33
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/34
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/35
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/36
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/37
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/38
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/39
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/40
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/41
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/42
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/43
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/44
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/45
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/46
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/47
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 3/0/48
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/1
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/2
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/3
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/4
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/5
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/6
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/7
+ switchport
+ switchport mode access
+ switchport access vlan 1
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/8
+ switchport
+ switchport mode access
+ switchport access vlan 1
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/9
+ switchport
+ switchport mode access
+ switchport access vlan 1
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/10
+ switchport
+ switchport mode access
+ switchport access vlan 1
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/11
+ switchport
+ switchport mode access
+ switchport access vlan 1
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/12
+ switchport
+ switchport mode access
+ switchport access vlan 1
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/13
+ switchport
+ switchport mode access
+ switchport access vlan 1
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/14
+ switchport
+ switchport mode access
+ switchport access vlan 1
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/15
+ switchport
+ switchport mode access
+ switchport access vlan 1
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/16
+ switchport
+ switchport mode access
+ switchport access vlan 1
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/17
+ switchport
+ switchport mode access
+ switchport access vlan 1
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/18
+ switchport
+ switchport mode access
+ switchport access vlan 1
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/19
+ switchport
+ switchport mode access
+ switchport access vlan 1
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/20
+ switchport
+ switchport mode access
+ switchport access vlan 1
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/21
+ switchport
+ switchport mode access
+ switchport access vlan 1
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/22
+ switchport
+ switchport mode access
+ switchport access vlan 1
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/23
+ switchport
+ switchport mode access
+ switchport access vlan 1
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/24
+ switchport
+ switchport mode access
+ switchport access vlan 1
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/25
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/26
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/27
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/28
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/29
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/30
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/31
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/32
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/33
+ speed 1000
+ switchport
+ switchport mode trunk
+ switchport trunk tag native-vlan
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/34
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/35
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/36
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/37
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/38
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/39
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/40
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/41
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/42
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/43
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/44
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/45
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/46
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/47
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/48
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/49
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/50
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/51
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/52
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/53
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/54
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/55
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/56
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/57
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/58
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/59
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/60
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/61
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/62
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/63
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/64
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/65
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/66
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/67
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/68
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/69
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/70
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/71
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/72
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/73
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/74
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/75
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/76
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/77
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/78
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/79
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/80
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/81
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/82
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/83
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/84
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/85
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/86
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/87
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/88
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/89
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/90
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/91
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/92
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/93
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/94
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/95
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface TenGigabitEthernet 4/0/96
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/1
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/2
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/3
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/4
+ fabric isl enable
+ fabric trunk enable
+ shutdown
+!
+interface FortyGigabitEthernet 1/0/5
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/6
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/7
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/8
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/9
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/10
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/11
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/12
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/13
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/14
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/15
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/16
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/17
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/18
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/19
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/20
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/21
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/22
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/23
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/24
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/25
+ switchport
+ switchport mode trunk
+ switchport trunk allowed vlan add 18
+ switchport trunk tag native-vlan
+ spanning-tree shutdown
+ no fabric isl enable
+ no fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/26
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/27
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/28
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/29
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/30
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/31
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/32
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/33
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/34
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/35
+ switchport
+ switchport mode trunk
+ switchport trunk allowed vlan add 18
+ switchport trunk tag native-vlan
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 1/0/36
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/1
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/2
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/3
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/4
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/5
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/6
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/7
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/8
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/9
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/10
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/11
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/12
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/13
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/14
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/15
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/16
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/17
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/18
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/19
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/20
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/21
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/22
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/23
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/24
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/25
+ switchport
+ switchport mode access
+ switchport access vlan 18
+ spanning-tree shutdown
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/26
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/27
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/28
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/29
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/30
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/31
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/32
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/33
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/34
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/35
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 2/0/36
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 3/0/49
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 3/0/50
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 3/0/51
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 3/0/52
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 4/0/97
+ fabric isl enable
+ fabric trunk enable
+ shutdown
+!
+interface FortyGigabitEthernet 4/0/98
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 4/0/99
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 4/0/100
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 4/0/101
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 4/0/102
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 4/0/103
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 4/0/104
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 4/0/105
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 4/0/106
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 4/0/107
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface FortyGigabitEthernet 4/0/108
+ fabric isl enable
+ fabric trunk enable
+ no shutdown
+!
+interface Port-channel 1
+ no vlag ignore-split
+ speed 1000
+ switchport
+ switchport mode trunk
+ switchport trunk allowed vlan add 18
+ switchport trunk tag native-vlan
+ no spanning-tree shutdown
+ no shutdown
+!
+interface Port-channel 2
+ vlag ignore-split
+ switchport
+ switchport mode trunk
+ switchport trunk allowed vlan add 18
+ switchport trunk tag native-vlan
+ spanning-tree shutdown
+ no shutdown
+!
+interface Fcoe 1/3/1
+ no shutdown
+!
+interface Fcoe 1/3/2
+ no shutdown
+!
+interface Fcoe 1/3/3
+ no shutdown
+!
+interface Fcoe 1/3/4
+ no shutdown
+!
+interface Fcoe 1/3/5
+ no shutdown
+!
+interface Fcoe 1/3/6
+ no shutdown
+!
+interface Fcoe 1/3/7
+ no shutdown
+!
+interface Fcoe 1/3/8
+ no shutdown
+!
+interface Fcoe 1/3/9
+ no shutdown
+!
+interface Fcoe 1/3/10
+ no shutdown
+!
+interface Fcoe 1/3/11
+ no shutdown
+!
+interface Fcoe 1/3/12
+ no shutdown
+!
+interface Fcoe 1/3/13
+ no shutdown
+!
+interface Fcoe 1/3/14
+ no shutdown
+!
+interface Fcoe 1/3/15
+ no shutdown
+!
+interface Fcoe 1/3/16
+ no shutdown
+!
+interface Fcoe 1/3/17
+ no shutdown
+!
+interface Fcoe 1/3/18
+ no shutdown
+!
+interface Fcoe 1/3/19
+ no shutdown
+!
+interface Fcoe 1/3/20
+ no shutdown
+!
+interface Fcoe 1/3/21
+ no shutdown
+!
+interface Fcoe 1/3/22
+ no shutdown
+!
+interface Fcoe 1/3/23
+ no shutdown
+!
+interface Fcoe 1/3/24
+ no shutdown
+!
+interface Fcoe 1/3/25
+ no shutdown
+!
+interface Fcoe 1/3/26
+ no shutdown
+!
+interface Fcoe 1/3/27
+ no shutdown
+!
+interface Fcoe 1/3/28
+ no shutdown
+!
+interface Fcoe 1/3/29
+ no shutdown
+!
+interface Fcoe 1/3/30
+ no shutdown
+!
+interface Fcoe 1/3/31
+ no shutdown
+!
+interface Fcoe 1/3/32
+ no shutdown
+!
+interface Fcoe 1/3/33
+ no shutdown
+!
+interface Fcoe 1/3/34
+ no shutdown
+!
+interface Fcoe 1/3/35
+ no shutdown
+!
+interface Fcoe 1/3/36
+ no shutdown
+!
+interface Fcoe 1/3/37
+ no shutdown
+!
+interface Fcoe 1/3/38
+ no shutdown
+!
+interface Fcoe 1/3/39
+ no shutdown
+!
+interface Fcoe 1/3/40
+ no shutdown
+!
+interface Fcoe 1/3/41
+ no shutdown
+!
+interface Fcoe 1/3/42
+ no shutdown
+!
+interface Fcoe 1/3/43
+ no shutdown
+!
+interface Fcoe 1/3/44
+ no shutdown
+!
+interface Fcoe 1/3/45
+ no shutdown
+!
+interface Fcoe 1/3/46
+ no shutdown
+!
+interface Fcoe 1/3/47
+ no shutdown
+!
+interface Fcoe 1/3/48
+ no shutdown
+!
+interface Fcoe 1/3/49
+ no shutdown
+!
+interface Fcoe 1/3/50
+ no shutdown
+!
+interface Fcoe 1/3/51
+ no shutdown
+!
+interface Fcoe 1/3/52
+ no shutdown
+!
+interface Fcoe 1/3/53
+ no shutdown
+!
+interface Fcoe 1/3/54
+ no shutdown
+!
+interface Fcoe 1/3/55
+ no shutdown
+!
+interface Fcoe 1/3/56
+ no shutdown
+!
+interface Fcoe 1/3/57
+ no shutdown
+!
+interface Fcoe 1/3/58
+ no shutdown
+!
+interface Fcoe 1/3/59
+ no shutdown
+!
+interface Fcoe 1/3/60
+ no shutdown
+!
+interface Fcoe 1/3/61
+ no shutdown
+!
+interface Fcoe 1/3/62
+ no shutdown
+!
+interface Fcoe 1/3/63
+ no shutdown
+!
+interface Fcoe 1/3/64
+ no shutdown
+!
